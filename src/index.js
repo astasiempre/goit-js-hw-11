@@ -35,6 +35,7 @@ const getImage = async function (searchQuery) {
         // console.log(resp)
         // return data;
         gallery.innerHTML = createMarkUp(data)
+     
         
     } catch (error){
         console.log(error.message);
@@ -43,11 +44,14 @@ getImage()
 function createMarkUp(arr) {
     return arr.map(({
         hits: {
-            largeImageURL, comments
-            , likes, views
+            webformatURL
+, comments
+            , likes, views, tags
+
         }
     }) => `<div class="photo-card">
-  <img src="${largeImageURL}" alt="" loading="lazy" />
+  <img src="${webformatURL
+}" alt="${tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
       <b>Likes${likes}</b>
