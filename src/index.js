@@ -40,7 +40,8 @@ const getImage = async function (searchQuery) {
     } catch (error){
         console.log(error.message);
     }}
-getImage()
+    getImage()
+    
 function createMarkUp(arr) {
     return arr.map(({
         hits: {
