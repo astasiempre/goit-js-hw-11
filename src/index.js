@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const form = document.querySelector('#search-form');
-const gallery = document.querySelector('#gallery');
+const form = document.querySelector('.search-form');
+const gallery = document.querySelector('.gallery');
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
@@ -47,7 +47,7 @@ form.addEventListener('submit', async e => {
 //         ({
 //           hits: { webformatURL, comments, likes, views, tags }
 //         }) => `<div class="photo-card">
-//   <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+//   <img src="${webformatURL}" alt="${tags}" loading="lazy"  />
 //   <div class="info">
 //     <p class="info-item">
 //       <b>Likes: ${likes}</b>
@@ -66,7 +66,7 @@ form.addEventListener('submit', async e => {
     .map(
       ({ webformatURL, comments, likes, views, tags }) => `
       <div class="photo-card">
-        <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+        <img src="${webformatURL}" alt="${tags}" loading="lazy" width=300/>
         <div class="info">
           <p class="info-item">
             <b>Likes: ${likes}</b>
